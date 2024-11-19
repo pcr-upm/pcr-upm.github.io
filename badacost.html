@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BadaCost paper</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+  								<header id="header">
+									<h1>Object detection</h1>
+								   <ul class="icons">
+										<li><a href="https://github.com/pcr-upm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+								
+							<!-- Section -->
+								<section>
+									<h2>BadaCost: Multiclass Boosting with Costs</h2>
+									<p>
+									  We introduce <a href="publications.html#PR2018">a multi-class cost-sensitive Boosting algorithm</a> based on a generalization of the Boosting margin, termed
+									  multi-class cost-sensitive margin. We prove that the new algorithm, BAdaCost, is a cost-sensitive generalization of SAMME as well as
+									  a multi-class generalization of the Cost-sensitive AdaBoost. First, we evaluate the performance with standard multi-class datasets and
+									  compare our results with other multi-class cost-sensitive algorithms proposed in the literature. After validating BAdaCost as the best
+									  multi-class cost-sensitive boosting we address different applications of the cost sensitive approach. We validate further our algorithm in
+									  two relevant computer vision problems: multi-view face and car detection. We show experimentally that multi-view object detection is
+									  possible with BAdaCost performing better than the usual one detector per view approach. Moreover, the classifiers (with trees) trained
+									  with our approach are more efficient than the one detector per class solution because we have to learn and execute far less decision
+									  tree nodes.
+                          </p>
+                          <p>
+                            <img class="big_image" src="images/badacost_oscars2013.png" alt="Face Detection BAdaCost: Oscars 2013">
+                          </p>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Software</h2>
+									</header>
+									<p>
+                             We have modified the Piotr Dollar's Matlab toolbox for multiclass detection with trees. The trees are cost-sensitive 
+                             multiclass classifiers that needs a cost matrix to work. The BAdaCost cost-sensitive multi-class classifier is used to perform object detection.
+                           </p>
+                           <br> 
+                           <b>Download the code at <a href="https://github.com/jmbuena/toolbox.badacost.public" target=”_blank” onclick=”_gaq.push(['_trackEvent','Download','CODE_BADACOST',this.href]);”>GitHub</a></b> 
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Results (click on images to watch videos)</h2>
+									</header>
+							      <p>
+							      All videos here have been processed with our implementation of BAdaCost in Matlab. The detection results shown, faces and cars, are all
+							      the bounding boxes with score greater or equal to 10 (as in the paper).
+							      </p>
+							
+							      <h4>Faces:</h4>
+						      
+									<div class="box alt">
+  										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4">
+												<span class="image fit">
+												<a class="pub" href="badacost/People_Walking_in_NYC_5_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_NYC_5', this.href);">
+												<img class="caption_image_one_third" src="badacost/People_Walking_in_NYC_5_BAdaCost.png" alt="Face Detection BAdaCost: People_Walking_in_NYC_5_BAdaCost"></a>
+												</span>
+											</div>
+											<div class="col-4">
+												<span class="image fit">
+							        			<a class="pub" href="badacost/Oxford_Street_London_Walk_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_OXFORD', this.href);">
+								        		<img class="caption_image_one_third" src="badacost/Street_London_BAdaCost.png" alt="Face Detection BAdaCost: Oxford Street"></a>      
+												</span>
+											</div>
+							      		<div class="col-4">
+												<span class="image fit">
+							        			<a class="pub" href="badacost/ARRIVAL_International_Trailer_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_ARRIVAL', this.href);">
+								        		<img class="caption_image_one_third" src="badacost/The_Arrival_BAdaCost.png" alt="Face Detection BAdaCost: The Arrival promo"></a>          
+												</span>
+  									   	</div>
+  									   </div>
+									</div>
+							              
+							      <h4>Cars (image03 from KITTI processed, whereas the image02 is the used for training and testing detectors):</h4>
+									<div class="box alt">
+  										<div class="row gtr-50 gtr-uniform">
+											<div class="col-4">
+												<span class="image fit">
+							        			<a class="pub" href="badacost/10fps_2011_09_26_drive_0019_sync_image03_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_2011_09_26_drive_0019', this.href);">
+							        			<img class="caption_image_one_third" src="badacost/2011_09_26_drive_0019_sync_image03_BAdaCost.png" alt="Face Detection BAdaCost: 2011_09_26_drive_0019"></a>
+							        			</span>
+							        		</div>     
+											<div class="col-4">
+												<span class="image fit">						        
+							        			<a class="pub" href="badacost/10fps_2011_09_26_drive_0036_sync_image03_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_2011_09_26_drive_0036', this.href);">
+							        			<img class="caption_image_one_third" src="badacost/2011_09_26_drive_0036_sync_image03_BAdaCost.png" alt="Face Detection BAdaCost: 2011_09_26_drive_0036"></a>
+							        			</span>
+							        		</div>     
+											<div class="col-4">
+												<span class="image fit">							        
+							        			<a class="pub" href="badacost/10fps_2011_09_29_drive_0071_sync_image03_BAdaCost.avi" target="_blank" onclick="ga('send', 'event', 'Download', 'BADACOST_2011_09_29_drive_0071', this.href);">
+							        			<img class="caption_image_one_third" src="badacost/2011_09_29_drive_0071_sync_image03_BAdaCost.png" alt="Face Detection BAdaCost: 2011_09_29_drive_0071"></a>
+							        			</span>
+							        		</div>
+							        	</div>
+							      </div>     
+								</section>
+					  </div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Presentation</a></li>
+										<li><a href="people.html">People</a></li>
+										<li>
+                                <span class="opener">Research</span>
+                                <ul>
+                                  <li><a href="research.html#RESEARCH_AREAS">Research Areas</a></li>
+                                  <li><a href="research.html#PATENTS">Patents</a></li>
+                                  <li><a href="research.html#PROJECTS">Projects</a></li>                                  
+                                </ul>
+                              </li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="downloads.html">Downloads</a></li>
+									</ul>
+								</nav>
+
+
+					<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; PCR-UPM. All rights reserved. <br>
+                           <a href="https://html5up.net/editorial">Editorial</a> template designed by: <a href="https://html5up.net">HTML5 UP</a>.
+                           </p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PCR Research on Image Alignment</title>
+      <meta name="description" content="PCR Computer Vision research group at the Artificial Intelligence Department of the Technical University of Madrid (UPM)">
+      <meta name="keywords" content="computer vision, tracking, segmentation, facial attributes, face tracking">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h1>Image Alignment</h1>
+								   <ul class="icons">
+										<li><a href="https://github.com/pcr-upm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>            
+               
+               
+						<!-- Section -->
+							<section>
+	                    <div class="row">
+                        <div class="col-12">
+							 	 <div class="table-wrapper">
+								   <table>
+	  								   <tbody>
+										  <tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/opal_panoptic_cropped.gif" alt="Wide range 3D head pose estimation (HPE)"></span>
+											   <b>Wide-range 3D head pose estimation.</b><br>											   											  
+													Recent applications require the analysis of faces in the
+													full 360◦ rotation range. We analyze the methodology for short- and wide-range HPE and discuss which 
+													representations and metrics are adequate for each case. We show that the popular
+													Euler angles representation is a good choice for short-range HPE, but not at extreme rotations. However, the
+													Euler angles’ gimbal lock problem prevents them from being used as a valid metric in any setting. 
+													We introduce a procedure to quantify the misalignment between the reference systems of the training and test 
+													data sets and a new methodology for cross-data set HPE that establishes new, more accurate, SOTA for the 300W-LP/Biwi 
+													benchmark. We propose a generalization of the geodesic angular distance metric that enables the construction 
+													of a loss that controls the contribution of each training sample to the optimization of the model. We also 
+													introduce a wide range HPE benchmark based on the CMU Panoptic data set.								   
+													<br>
+											      <b>Related Publications:</b>
+	  				  							   <a href="publications.html#PR2024">PR'2024</a>
+											 </td>
+										  </tr>
+										    <td>
+  											   <span class="image left"><img src="images/football.gif" alt="3D head pose estimation"></span>
+											   <b>Multi-task 3D pose estimation.</b><br>
+												We study the problem of multi-task 3D head pose estimation. By using the landmarks 
+												localization and visibility estimation as an auxiliary task we are able to get top performance 
+												in 3D head pose estimation in 
+												<a class="pub" href="https://paperswithcode.com/sota/head-pose-estimation-on-biwi" target="_blank" onclick="ga('send', 'event', 'Download', 'PAMI2021_BIWI_LEADERBOARD_HEAD_POSE', this.href);">BIWI (MNN)</a> and 
+												<a class="pub" href="https://paperswithcode.com/sota/head-pose-estimation-on-aflw2000" target="_blank" onclick="ga('send', 'event', 'Download', 'PAMI2021_AFLW2000_LEADERBOARD_HEAD_POSE', this.href);">AFLW2000-3D (MNN)</a>. 
+												As we use a multi-task approach we are able get top performance in landmarks visibility estimation 
+												in COFW and 3D landmarks projection localization in <a href="https://paperswithcode.com/sota/face-alignment-on-aflw2000-3d">AFLW2000-3D (MNN+OR)</a>. 
+												In a follow up work, <a href="https://github.com/andresprados/SPIGA">SPIGA</a>, 
+												we use Graph Attention Networks (GATs) with learned relative positional encodng to improve results in landmarks and 3D pose estimation.
+												<br>
+										      <b>Related Publications:</b>
+	  			  							   <a href="publications.html#PAMI2021">PAMI'2021</a>,
+	  			                        <a href="publications.html#BMVC2022">BMVC'2022</a><br>
+	         	                     <b>Some videos</b>
+	  	                              <a class="pub" href="https://www.youtube.com/watch?v=UB_qLW2CH40" target="_blank" onclick="ga('send', 'event', 'Download', 'PAMI2021_VIDEO1', this.href);">[VIDEO1]</a>
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/beblid3.png" alt="Efficient local image descriptors"></span>
+											   <b>Efficient local image descriptors.</b><br> 
+											   We have developed very efficient local image descriptors, BEBLID (Boosted Efficient 
+											   Binary Local Image Descriptor) and TEBLID (Triplet-based Efficient Binary Local 
+											   Image Descriptor), that can compute all the descriptors within an image in a few 
+											   milliseconds using a smartphone CPU. In BEBLID we have learned with AdaBoost the best set of 
+											   measures from a pool of several thousands. Each measure consists of the difference of the 
+											   average grey levels of two square boxes. The computation is fast because we use an integral 
+											   image to compute the grey level average of a square box. We train our descriptor taking into 
+											   account the unbalance nature of the matching process and we get very good results in HPatches. 
+											   In TEBLID we improved the BEBLID descriptor by using the triplet loss and other tricks developed 
+											   in the Deep Learning based descriptors but using the same very efficient local features. 
+												<br>
+										      <b>Related Publications:</b>
+									  			<a href="publications.html#IBPRIA2019">IbPRIA'2019</a>,
+									  			<a href="publications.html#PRL2020_BEBLID">PRL'2020</a>,
+									  			<a href="publications.html#RAL2021">RAL'2021</a><br>
+										      <b>Code:</b>
+								  			   <a href="https://github.com/iago-suarez/BEBLID">BEBLID GitHub</a>,
+								  			   <a href="https://docs.opencv.org/master/d7/d99/classcv_1_1xfeatures2d_1_1BEBLID.html">BEBLID OpenCV</a>,
+								  			   <a href="https://github.com/iago-suarez/efficient-descriptors">TEBLID GitHub</a>,
+								  			   <a href="https://docs.opencv.org/4.x/dd/dc1/classcv_1_1xfeatures2d_1_1TEBLID.html">TEBLID OpenCV</a>,            
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/ijcv2015.jpg" alt="Efficient compositional image aligment"></span>
+		                              <b>Rationalizing efficient compositional image alignment.</b><br> 
+		                              We study the issue of computational efficiency for Gauss-Newton (GN) 
+		                              non-linear least-squares optimization in the context of image alignment. 
+		                              We introduce the Constant Jacobian Gauss-Newton optimization, a GN scheme 
+		                              with constant Jacobian and Hessian matrices. We prove that 
+		                              the Inverse Compositional image alignment algorithm is an instance of this scheme.
+		                              We also prove that the forward and inverse compositional algorithms are not equivalent.
+		                              <br>
+                                    <b>Related Publications:</b>
+ 		       			               <a href="publications.html#IJCV2015">IJCV'2015</a>,
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/jrtip2015.jpg" alt="Fast homography estimation"></span>										  
+        		                        <b>Speeding-up homography estimation in mobile devices.</b><br> 
+  		                              We introduce a procedure for reducing the number of samples required for 
+									  		  fitting a homography to a set of noisy correspondences using a random 
+									  		  sampling method. This is achieved by means of a geometric constraint that 
+									  		  detects invalid minimal sets.
+									  		  <br>
+										     <b>Related Publications:</b>
+											  <a href="publications.html#JRTIP2015">JRTIP'2015</a>,										  
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/nonrigid_3d_tracking_face.png" alt="3D nonrigid tracking"></span>										  
+									          <b>Efficient 3d nonrigid tracking.</b><br>
+									          Efficient incremental image alignment is a topic of renewed interest in the computer 
+									          vision community because of its applications in model fitting and model-based object 
+									          tracking. We are working in efficient solutions to the 3D tracking of a head performing
+									          face expressions under changing illumination conditions.
+									          <b>Related Publications:</b>
+									          <a href="publications.html#VIE2005">VIE'2005</a>,
+									          <a href="publications.html#ICCV2005">ICCV'2005</a>
+									          <a href="publications.html#ICCV2009">ICCV'2009</a><br>
+									          <b>Some videos:</b>
+									          [<a href="videos/syntethic_sequence_results_no_illumation_changes.avi">Video 1</a>]
+									          [<a href="videos/syntethic_sequence_with_illumination_changes.avi">Video 2</a>]
+									          [<a href="http://www.youtube.com/watch?feature=player_embedded&v=7h11sethMh0">Video3 (youtube)</a>],
+									          [<a href="http://www.youtube.com/watch?feature=player_embedded&v=umhWqIFn9-4">Video4 (youtube)</a>]										  
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/appearance_tracking_with_illumination_changes.jpg" alt="Illumination independent appearance-based tracking"></span>
+								   	      <b>Efficient appearance-based tracking with illumination changes and face expressions.</b><br> 
+												separates facial expressions from illumination variations.  The
+												appearance of a face is represented by the addition of two
+												independent linear subspaces modelling facial expressions and
+												illumination.  This simple model enables us to train the system with
+												no manual intervention.  We also introduce an efficient procedure
+												for fitting this model, which can be used for tracking a human face
+												in real-time.
+												<br>             
+										      <b>Related Publications:</b>
+											   <a href="publications.html#BMVC2006">BMVC'2006</a>,
+											   <a href="publications.html#ICPR2006">ICPR'2006</a>,
+								  			   <a href="publications.html#IVC2009">IVC'2009</a><br>
+										      <b>Some videos:</b>
+								            [<a href="videos/appearance_tracking_with_illumination_changes.mpg">Video 1</a>],
+								            [<a href="videos/figure_16_experiment.mpg">Video 2</a>],
+								            [<a href="videos/figure_18_experiment.mpg">Video 3</a>],
+								            [<a href="videos/comparation_with_matthews_and_hager_real_experiment.mpg">Video 4</a>]<br>			 
+								            You can download the <a href="downloads.html">original sequences</a> used in our tests (BMVC 2006 paper image sequences).
+                                  </td>											 
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/eigentracking_face.jpg" alt="Efficient Eigentracking"></span>
+												<b>Efficient appearance-based tracking</b><br>
+									         We have developed an efficient way of minimizing the 
+												<a target="blank" href="https://doi.org/10.1023/A:1007939232436">eigentracking</a>
+												for nonrigid motion estimation. It is based on the precomputation of motion templates to save
+												on-line computation. It allows as to estimate appearance (PCA coefficients) and motion in real-time.
+												<br>
+												<b>Related Publications:</b>
+												<a href="publications.html#ANM2004">ANM'2004</a><br>
+									         <b>Some videos:</b>
+									         [<a href="videos/test4_anm2004.avi">Video 1</a>]								    
+                                  </td>											 
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/multiple_plane_tracking_face.jpg" alt="SSD Based Tracking"></span>
+							  					<b>SSD based 3D tracking.</b><br>
+												We have developed an algorithm for tracking a
+												rigid object based on a piecewise planar model. The tracking is
+												performed using a single incremental SSD-based tracker. The main
+												feature of the approach presented is that it can track a rigid set of
+												arbitrarily small patches all of which could not be individually tracked.
+												<br>
+												<b>Related Publications:</b>
+												<a href="publications.html#IBPRIA2003">IbPRIA'2003</a>,
+												<a href="publications.html#VLBV2003">VLBV'2003</a><br>
+												<b>Some videos (mpeg):</b>
+												[<a href="videos/ibpria2003_cube.mpg">Video 1</a>], 
+												[<a href="videos/ibpria2003_face.mpg">Video 2</a>]                                  
+					                   </td>											 
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/ssd_tracking.jpg" alt="SSD Based Tracking"></span>
+											   <b>SSD based tracking.</b><br> 
+												Planar tracking can be used for face tracking. We have
+												extended a well known framework for planar tracking
+												(see <a target=blank
+												href="https://doi.org/10.1109/34.722606">[Hager98]</a>) 
+												with a projective motion model. Additionally, using a calibrated camera, it is 
+												possible to estimate the 3D pose of the planar object. We have also developed 
+												a procedure to select the most informative pixels of the target template 
+												image for faster tracking.<br>
+												<b>Related Publications:</b>
+												<a href="publications.html#ICPR2002">ICPR'2002</a>, 
+												<a href="publications.html#ICIP2002">ICIP'2002</a><br>					 
+												<b>Some videos (mpeg):</b>&nbsp; 
+												[<a href="videos/test2_icpr2002.mpg">Video 1</a>], 
+												[<a href="videos/test3_icpr2002.mpg">Video 2</a>] 					                   
+					                   </td>											 
+										  </tr>
+										  <tr>
+										    <td>
+												<b>Colour Based Tracking.</b><br> 
+  											   <span class="image left"><img src="images/colour_tracking.jpg" alt="Colour Based Tracking"></span>
+												Tracking using colour is difficult when sudden light colour changes
+												take place. We have extented a well known colour constancy
+												algorithm, Grey World,  to  deal with such situations.
+												The  result is  more   robust than  widely   used RGB-normalisation,
+												although it is not perfect either.
+												<br>
+												<b> Related Publications: </b> 
+												<a href="publications.html#CAIP2001">CAIP'2001</a>, 
+												<br> 
+												<b>Some videos (mpeg):</b> 
+												[<a href="videos/light_colour_change.mpg"> light colour change</a>], 
+												[<a href="videos/light_colour_change_rgn.mpg">RGB-normalised</a>],
+												[<a href="videos/light_colour_change_dgw.mpg">DGW</a>].										  
+					                   </td>											 
+										  </tr>
+										  <tr>
+										    <td>
+  											   <span class="image left"><img src="images/robust_tracking.jpg" alt="SSD Based Tracking"></span>
+												<b>Robust face tracking.</b><br> 
+												All the algorithms based on a simple  visual cues fail in some 
+												circumstances. The key idea is to use this simple algorithms 
+												together in order to get robustness. All this algorithms should be 
+												"orthogonal"  in the sense of having different fail conditions.
+												<br>
+												<b>Some videos (mpeg):</b>
+												<a href="videos/colour_ssd_robust.avi"> Colour and SSD tracking</a> 					                   
+					                   </td>											 
+										  </tr>
+										</tbody>														
+								    </table>
+								  </div>
+	                     </div>	                                         
+							 </div>
+							</section>
+
+             
+                  </div>
+               </div>							
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>									
+										<li><a href="index.html">Presentation</a></li>
+										<li><a href="people.html">People</a></li>
+										<li>
+                                <span class="opener">Research</span>
+  									     <ul>
+                                  <li><span class="opener">Research Areas</span>
+  									           <ul>
+										    		<li><a href="attributes.html">Attributes</a></li>
+                                  		<li><a href="commercial.html">Commercial</a></li>
+		                                 <li><a href="tracking.html">Image Alignment</a></li>
+                                  	 	<li><a href="machine_learning.html">Machine Learning</a></li>
+		                                 <li><a href="segmentation.html">Segmentation</a></li>
+  									           </ul>
+		                            </li>
+                                  <li><a href="research.html#PATENTS">Patents</a></li>
+                                  <li><a href="research.html#PROJECTS">Projects</a></li>                                  
+                                </ul>
+                              </li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="downloads.html">Downloads</a></li>
+									</ul>
+								</nav>
+
+
+					<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; PCR-UPM. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

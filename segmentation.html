@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PCR Research on Segmentation</title>
+      <meta name="description" content="PCR Computer Vision research group at the Artificial Intelligence Department of the Technical University of Madrid (UPM)">
+      <meta name="keywords" content="computer vision, tracking, segmentation, facial attributes, face tracking">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h1>Segmentation</h1>
+								   <ul class="icons">
+										<li><a href="https://github.com/pcr-upm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>            
+               
+               
+						<!-- Section -->
+							<section>
+	                    <div class="row">
+                        <div class="col-12">
+							 	 <div class="table-wrapper">
+								   <table>
+	  								   <tbody>
+										  <tr>
+										    <td>
+  											    <span class="image left"><img src="images/piboost_segment2018.png" alt="Feature descriptors evaluation"></span>                             
+									          <b>Multi-class segmentation of neuronal structures in electron microscopy images</b>. 
+									          We consider the simultaneous segmentation of two structures using the <a href="publications.html#PR2014">PI-Boost</a>, namely, 
+									          synapses with mitochondria, and mitochondra with membranes. To this end we select three image stacks encompassing different SBFEM 
+									          acquisition technologies and image resolutions. We introduce both a new Boosting algorithm to perform feature scale selection and the
+									          <i>Jaccard Curve</i> as a tool compare several segmentation results. We then experimentally study the gains in performance obtained 
+									          when simultaneously segmenting two structures with properly selected image descriptor scales. The results show that by doing so we 
+									          achieve significant gains in segmentation accuracy when compared to the best results in the literature using boosting algorithms.
+									          <br>
+									          Simultaneously segmenting several neuronal structures described at different scales provides voxel classification algorithms with 
+									          highly discriminating features that significantly improve segmentation accuracy.
+									          <br>
+									          <b>Related Publications:</b>
+									  			 <a href="publications.html#BINF2018">BINF'2018</a>
+  			                         </td>											 
+										  </tr>										
+										  <tr>
+										    <td>
+  											    <span class="image left"><img  src="images/segmentation_features_icpr2014.png" alt="Feature descriptors evaluation"></span>            
+									          <b>Feature descriptors for Mitochondria and Synapse Segmentation</b>.<br>
+									          Full understanding of the architecture of the brain is a long term goal 
+									          of neuroscience. To achieve it, advanced image processing tools are required, 
+									          that automate the the analysis and reconstruction of brain structures. Synapses 
+									          and mitochondria are two prominent structures with neurological interest for 
+									          which various automated image segmentation approaches have been recently proposed. 
+									          In this work we present a comparative study of several image feature descriptors 
+									          used for the segmentation of synapses and mitochondria in stacks of electron 
+									          microscopy images.
+									          <br>
+									          <b>Related Publications:</b>
+									  			 <a href="publications.html#ICPR2014">ICPR'2014</a>  											                 
+                                  </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											    <span class="image left"><img src="images/eccv2014_segmentation.png" alt="Non-parametric Higher-Order Random Fields"></span>                                           
+									          <b>Non-parametric Higher-Order Random Fields for Image Segmentation</b>.
+									          Models defined using higher-order potentials are becoming
+									          increasingly popular in computer vision. However, the exact representation 
+									          of a general higher-order potential defined over many variables is
+									          computationally unfeasible. This has led prior works to adopt parametric 
+									          potentials that can be compactly represented. In this work we proposed a
+									          non-parametric higher-order model for image labeling problems that uses
+									          a patch-based representation of its potentials. We use a known transformation
+									          scheme to convert the higher-order potentials to a pair-wise
+									          form that can be handled using traditional inference algorithms. This
+									          representation is able to capture structure, geometrical and topological
+									          information of labels from training data and to provide more precise 
+									          segmentations. Other tasks such as image denoising and reconstruction are
+									          also possible. We evaluate our method on denoising and segmentation problems 
+									          with synthetic and real images.
+									          <br>
+									          <b>Related Publications:</b>
+									  			 <a href="publications.html#ECCV2014">ECCV'2014</a>
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											    <span class="image left"><img src="images/morph_snakes.png" alt="Morphological Snakes"></span>                            		               
+									          <b>A morphological approach to curvature-based evolution of curves and surfaces</b>.<br>
+									          We introduce new results connecting differential and morphological operators that 
+									          provide a formal and theoretically grounded approach for stable and fast contour 
+									          evolution. Contour evolution algorithms have been extensively used for boundary 
+									          detection and tracking in computer vision. The standard solution based on partial 
+									          differential equations and level-sets requires the use of numerical methods of integration 
+									          that are costly computationally and may have stability issues. We present a morphological
+									          approach to contour evolution based on a new curvature morphological operator valid for 
+									          surfaces of any dimension. We approximate the numerical solution of the curve evolution 
+									          PDE by the successive application of a set of morphological operators defined on a binary 
+									          level-set and with equivalent infinitesimal behavior. These operators are very fast, do 
+									          not suffer numerical stability issues and do not degrade the level set function, so there 
+									          is no need of re-initializing it. Moreover, their implementation is much easier since they do
+									          not require the use of sophisticated numerical algorithms. We validate the approach providing 
+									          a morphological implementation of the Geodesic Active Contours, the Active Contours Without 
+									          Borders and Turpopixels. In the experiments conducted the morphological implementations 
+									          converge to solutions equivalent to those achieved by traditional numerical solutions, but 
+									          with significant gains in simplicity, speed and stability.
+									          <br>
+									          <b>Related Publications:</b>
+									  			 <a href="publications.html#CVPR2010">CVPR'2010</a>,
+									  			 <a href="publications.html#PAMI2014">PAMI'2014</a>
+									       </td>
+										  </tr>
+										</tbody>														
+								    </table>
+								  </div>
+	                     </div>	                                         
+							 </div>
+							</section>
+
+             
+                  </div>
+               </div>							
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>									
+										<li><a href="index.html">Presentation</a></li>
+										<li><a href="people.html">People</a></li>
+										<li>
+                                <span class="opener">Research</span>
+  									     <ul>
+                                  <li><span class="opener">Research Areas</span>
+  									           <ul>
+										    		<li><a href="attributes.html">Attributes</a></li>
+                                  		<li><a href="commercial.html">Commercial</a></li>
+		                                 <li><a href="tracking.html">Image Alignment</a></li>
+                                  	 	<li><a href="machine_learning.html">Machine Learning</a></li>
+		                                 <li><a href="segmentation.html">Segmentation</a></li>
+  									           </ul>
+		                            </li>
+                                  <li><a href="research.html#PATENTS">Patents</a></li>
+                                  <li><a href="research.html#PROJECTS">Projects</a></li>                                  
+                                </ul>
+                              </li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="downloads.html">Downloads</a></li>
+									</ul>
+								</nav>
+
+
+					<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; PCR-UPM. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

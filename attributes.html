@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PCR Research on Facial and Body attributes</title>
+      <meta name="description" content="PCR Computer Vision research group at the Artificial Intelligence Department of the Technical University of Madrid (UPM)">
+      <meta name="keywords" content="computer vision, tracking, segmentation, facial attributes, face tracking">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<h1>Facial and Body Attributes</h1>
+								   <ul class="icons">
+										<li><a href="https://github.com/pcr-upm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>            
+               
+               
+						<!-- Section -->
+							<section>
+	                    <div class="row">
+                        <div class="col-12">
+							 	 <div class="table-wrapper">
+								   <table>
+	  								   <tbody>
+										  <tr>
+										    <td>
+  											     <span class="image left"><img src="images/poguise_gflops_acc_ntu60.png" alt="Body action recognition"></span>
+										  		  <b>Action recognition.</b><br>
+										  		  We use a multi-task approach to estimate body landmarks and action recognition.
+										  		  The model is a VideoMAE, a Vision Transformer (ViT) pretrained masking out may of the tokens to 
+										  		  reconstruct the input video. Landmarks taks is used to guide pose token pruning and merging
+										  		  getting a much more computationally efficient inference with even improved action recognition 
+										  		  accuracy than the base VideoMAE model. 
+										  		  <br>
+										        <b>Related Publications:</b>
+										  	     <a href="publications.html#IV2024">IV'2024</a>,		
+										  	     <a href="https://arxiv.org/abs/2407.13750v1" target="_blank">Arxiv'024</a>								    
+					                   </td>											 
+										  </tr>										
+										  <tr>
+										  <tr>
+										    <td>
+  											     <span class="image left"><img src="images/landmarks.png" alt="Facial Landmarks"></span>
+										  		  <b>Facial landmarks.</b><br> 
+										  		  We study the problem of facial landmarks localization with a combination of Convolutional Neural 
+										  		  Networks (CNNs) and Ensembles of Regression Trees (ERT). Once initialized with a valid face shape, 
+										  		  the ERT is able to keep the face shape while estimating the non-rigid facial deformations. The ERT 
+										  		  allows to get top performance with a single encoder-decoder network (i.e. while other solutions use 
+										  		  a cascade of several encoder-decoders). We also study the cascade of CNNs and we find that with only 2 
+										  		  we can get top performance by learning to extract the landmark coordinate from the heatmp instead of 
+										  		  using the usual argmax.
+										  		  <br>
+										        <b>Related Publications:</b>
+										  	     <a href="publications.html#ECCV2018">ECCV'2018</a>,
+										  		  <a href="publications.html#CIARP2018">CIARP'2018</a>,
+										  		  <a href="publications.html#CVIU2019">CVIU'2019</a>,
+										  		  <a href="publications.html#PRL2020_lndmks">PRL'2020</a>,
+										  		  <a href="publications.html#PAMI2021">PAMI'2021</a>
+											 </td>
+										  </tr>
+										    <td>
+  											     <span class="image left"><img src="images/attributes_dependencies_ciarp2011.png"  alt="Attributes dependencies"></span>
+									           <b>Dependencies between facial attributes given the appearance</b>.<br>
+									           Recent works report significant drops in performance for state-of-the-art 
+									           gender classifiers when evaluated "in the wild", i.e. with uncontrolled 
+									           demography and environmental conditions. We hypothesize that this is caused 
+									           by the existence of dependencies among facial demographic attributes that have 
+									           not been considered when building the classifier. In the paper we study the 
+									           dependencies among gender, age and pose facial attributes. By considering the relation
+									           between gender and pose attributes we also avoid the use of computation-ally expensive 
+									           and fragile face alignment procedures. In the experiments we confirm the existence 
+									           of dependencies among gender, age and pose facial attributes and prove that we can 
+									           improve the performance and robustness of gender classifiers by exploiting these 
+									           dependencies. 
+									           <br>
+									           <b>Related Publications:</b>
+									  			  <a href="publications.html#CIARP2011">CIARP'2011</a>,
+									  			  <a href="publications.html#IBPRIA2013">IBPRIA'2013</a>,
+									  			  <a href="publications.html#PRL2014">PRL'2014</a>										    
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+  											     <span class="image left"><img src="images/age_estimation.png" alt="Age estimation"></span>
+									   	     <b>Facial age estimation </b><br>
+											     We developed a "light weight" face age estimation algorithm using PCA+LDA and KNN regression.
+											     <br> 
+											     <b>Related Publications:</b>
+									  			  <a href="publications.html#IBPRIA2011">IBPRIA'2011</a>										    
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+                                       <span class="image left"><img  src="images/attributes.png" alt="Gender recognition"></span>
+										  		   <b>PCA+LDA face gender recognition</b>.<br>
+													We developed gender classification algorithm using an 
+													simple holistic approach. We got 93% accuracy on FERET database (5-fold cross validation) and 
+													an speed comparable to the fastest gender recognition algorithms. This algorithm is 
+													based on PCA+LDA with proper cross-validation of PCA dimensions.
+													<br> 
+										 	      <b>Related Publications:</b>
+										  			<a href="publications.html#PAMI2011">PAMI'2011</a>
+										  			<br>
+										 			<b>Some videos:</b>
+													[<a href="http://www.youtube.com/watch?v=vZWN6OOfPI4">Video 1 (youtube)</a>]
+													[<a href="http://vimeo.com/51210467">Video 2 (vimeo with sound)</a>]										    
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+                                       <span class="image left"><img src="images/paa2008.png" alt="Face expressions recognition"></span>
+										         <b>Face expressions recognition</b><br>
+													We used our 2D appearance tracking algorithm [<a href="publications.html#BMVC2006">BMVC'2006</a>]
+													to track the face. We developed a user independent manifold of face expressions using PCA+LDA and then
+													we classified the expressions using KNN. 
+													<br>
+												   <b>Related Publications:</b>
+										  			<a href="publications.html#PAA2008">PAA'2008</a>,
+										         <a href="publications.html#FG2008">FG2008</a>.
+										         <br>										    
+									            <b>Some videos:</b>
+												   [<a href="http://www.youtube.com/watch?v=b58RpVvsfpM">Video 1 (youtube)</a>]
+												   [<a href="videos/real_experiment_sequence.mpg">Video 2 (mpeg)</a>]
+												   <br>
+									            <b>Matlab scripts:</b>&nbsp;
+												   <a href="downloads.html#COHN_KANADE_APRIORI_CLASSIFICATION">Cohn-Kanade database a priori classification of facial expresions</a> 											 
+											 </td>
+										  </tr>
+										  <tr>
+										    <td>
+                                      <span class="image left"><img src="images/eigentracking_reanimation.jpg"	alt="Appearance-based 3D reanimation"></span>
+										  		  <b>Appearance-based reanimation from expressions estimation</b><br>
+										        We developed a way of doing 3D face reanimation based on appearance-based technicques.
+										        <br>
+										        <b>Related Publications:</b>
+										        <a href="publications.html#IBPRIA2005">IbPRIA'2005</a>.
+										        <a href="publications.html#ICPR2006">ICPR'2006</a>.
+										        <br>
+												  <b>Some videos:</b>
+										  		  [<a href="videos/eigentracking_3d_reanimation.avi">video 1</a>],
+												  [<a href="videos/secuencia_urjc_d054_jmbuena.mpg">video 2</a>],
+												  [<a href="videos/secuencia_urjc_d054_jmserrano.mpg">video 3</a>],
+												  [<a href="videos/secuencia_urjc_d054_jorge.mpg">video 4</a>],
+												  [<a href="videos/secuencia_urjc_d054_sergio.mpg">video 5</a>]										    
+											 </td>
+										  </tr>
+										</tbody>														
+								    </table>
+								  </div>
+	                     </div>	                                         
+							 </div>
+							</section>
+
+             
+                  </div>
+               </div>							
+
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<!--section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section-->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>									
+										<li><a href="index.html">Presentation</a></li>
+										<li><a href="people.html">People</a></li>
+										<li>
+                                <span class="opener">Research</span>
+  									     <ul>
+                                  <li><span class="opener">Research Areas</span>
+  									           <ul>
+										    		<li><a href="attributes.html">Attributes</a></li>
+                                  		<li><a href="commercial.html">Commercial</a></li>
+		                                 <li><a href="tracking.html">Image Alignment</a></li>
+                                  	 	<li><a href="machine_learning.html">Machine Learning</a></li>
+		                                 <li><a href="segmentation.html">Segmentation</a></li>
+  									           </ul>
+		                            </li>
+                                  <li><a href="research.html#PATENTS">Patents</a></li>
+                                  <li><a href="research.html#PROJECTS">Projects</a></li>                                  
+                                </ul>
+                              </li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="downloads.html">Downloads</a></li>
+									</ul>
+								</nav>
+
+
+					<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; PCR-UPM. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

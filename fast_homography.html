@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JRTIP 2016 paper</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+  								<header id="header">
+									<h2>Fast homography estimation</h2>
+								   <ul class="icons">
+										<li><a href="https://github.com/pcr-upm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+								</header>
+
+								
+							<!-- Section -->
+								<section>
+  								<h2>Speeding-up homography estimation in resource-limited computing devices</h2>
+								  <p>
+                          A critical problem faced by computer vision on mobile devices is reducing the computational cost of algorithms and avoiding 
+                          visual stalls. In this paper we introduce a procedure for reducing the number of samples required for fitting a homography 
+                          to a set of noisy correspondences using a random sampling method. This is achieved by means of a geometric constraint that 
+                          detects invalid minimal sets. In the experiments conducted we show that this constraint not only reduces the number of random 
+                          samples at a negligible computational cost, but also balances the processor workload over time preventing visual stalls. 
+                          In extreme situations of very large outlier proportion and noise level, it reduces in about one order of magnitude the number 
+                          of required random samples. 
+                          </p>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Software</h2>
+									</header>
+									<p>
+							        We have modified the RANSAC Homography estimation to introduce a circular ordering constraint. We provide a version of the software that 
+							        can be compiled and used in GNU/linux.
+                           </p>
+                           <br>
+                           <ul> 
+									 <LI>Download the <a href="downloads/posters_sequence_paper_JRTIP_2013.zip" onclick="ga('send', 'event', 'Download','POSTERS_SEQUENCE',this.href);">posters sequence</a>.</LI>
+						          <LI>Download the <a href="downloads/templates_paper_JRTIP_2013.zip" onclick="ga('send', 'event', 'Download','TEMPLATES_POSTERS_SEQUENCE',this.href);">posters squence image templates</a>.</LI>
+						          <LI>Download the <a href="fast_homography/README_opencv_2_4.txt" target=”_blank” onclick=”_gaq.push(['_trackEvent','Download','TXT',this.href]);”>README.txt file</a></LI>
+						          <LI>Download a tar.gz file with the <a href="fast_homography/constrained_ransac_homography_opencv_2_4.tar.gz" target=”_blank” onclick=”_gaq.push(['_trackEvent','Download','TGZ',this.href]);”>sample software</a> </LI>
+						          <LI>Download the <a href="fast_homography/opencv_2.2_speeding-up-ransac-homography-constraint.patch" target=”_blank” onclick=”_gaq.push(['_trackEvent','Download','PATCH',this.href]);”>OpenCV 2.2 patch</a> </LI>
+						          <LI>Download the <a href="fast_homography/opencv_2.4_speeding-up-ransac-homography-constraint.patch" target=”_blank” onclick=”_gaq.push(['_trackEvent','Download','PATCH',this.href]);”>OpenCV 2.4 patch</a> </LI>
+						          <LI><a href="https://github.com/Itseez/opencv/pull/289" target=”_blank”>Pull request</a> accepted in OpenCV
+						         </ul>       
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Highlights</h2>
+									</header>
+							      <p>
+								      The code is minimal but it has a great impact in the speed of RANSAC homography estimation. And it could be important in CPU 
+								      limited platforms like mobile devices. In a nutsell, RANSAC homography estimation time depends on the number of iterations 
+								      and time needed to: 1) fit a homography H_i to a 4 points minimal set and 2) checking for inliers to H_i . However, 
+								      if most of the random 4 points sets are not geometrically consistent then checking for inliers is not even necesary, they 
+								      could be rejected very easily. The code has a heavy impact on estimation time mainly with a high number of outlier matches.
+							      </p>
+							      <p>
+							         In the following figures we show the an example of homography estimation with and without the check:
+							      </p>
+							
+									<div class="box alt">
+  										<div class="row gtr-50 gtr-uniform">
+											<div class="col-12">
+												<span class="image fit">
+												<img src="fast_homography/example_ransac_sequence_images.png"  alt="">
+												</span>
+											</div>
+  									   </div>
+  										<div class="row gtr-50 gtr-uniform">
+											<div class="col-12">
+												<span class="image fit">
+      										<img src="fast_homography/example_ransac_sequence_num_inliers.png"  alt="">												
+      										</span>
+											</div>
+  									   </div>
+  										<div class="row gtr-50 gtr-uniform">
+											<div class="col-12">
+												<span class="image fit">
+												<img src="fast_homography/example_ransac_sequence_time.png">
+      										</span>
+											</div>
+  									   </div>
+									</div>							              
+								</section>
+					  </div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Presentation</a></li>
+										<li><a href="people.html">People</a></li>
+										<li>
+                                <span class="opener">Research</span>
+                                <ul>
+                                  <li><a href="research.html#RESEARCH_AREAS">Research Areas</a></li>
+                                  <li><a href="research.html#PATENTS">Patents</a></li>
+                                  <li><a href="research.html#PROJECTS">Projects</a></li>                                  
+                                </ul>
+                              </li>
+										<li><a href="publications.html">Publications</a></li>
+										<li><a href="downloads.html">Downloads</a></li>
+									</ul>
+								</nav>
+
+
+					<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; PCR-UPM. All rights reserved. <br>
+                           <a href="https://html5up.net/editorial">Editorial</a> template designed by: <a href="https://html5up.net">HTML5 UP</a>.
+                           </p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
