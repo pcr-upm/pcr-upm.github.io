@@ -40,6 +40,20 @@
 	  								   <tbody>
 										  <tr>
 										    <td>
+  											     <span class="image left"><img src="images/sfa_deepfakes_fake_resized.gif" alt="Deepfakes detection"></span>
+										  		  <b>Deepfakes detection.</b><br>
+										  		  We use a multi-task approach to estimate facial landmarks and if the face on video is real or forgery.
+										  		  The model is a <a href="https://github.com/ControlNet/MARLIN" target="_blank" >MARLIN</a>, a Vision Transformer 
+										  		  (ViT) pretrained with facial videos. The motion heatmaps of each individual landmarks in a 16 frames clip is 
+										  		  estimated as well as the real or fake classification. We show that the multitask approach including detailed facial motion
+										  		  estimation improves by a large margin the forgery detection task. 
+										  		  <br>
+										        <b>Related Publications:</b>
+										  	     <a href="publications.html#FG2025">FG'2025</a>,
+					                   </td>											 
+										  </tr>									
+										  <tr>
+										    <td>
   											     <span class="image left"><img src="images/poguise_gflops_acc_ntu60.png" alt="Body action recognition"></span>
 										  		  <b>Action recognition.</b><br>
 										  		  We use a multi-task approach to estimate body landmarks and action recognition.
@@ -49,11 +63,10 @@
 										  		  accuracy than the base VideoMAE model. 
 										  		  <br>
 										        <b>Related Publications:</b>
-										  	     <a href="publications.html#IV2024">IV'2024</a>,		
-										  	     <a href="https://arxiv.org/abs/2407.13750v1" target="_blank">Arxiv'024</a>								    
+										  	     <a href="publications.html#IV2024">IV'2024</a>,
+										  	     <a href="publications.html#IMAVIS2025" target="_blank">IMAVIS'2025</a>								    
 					                   </td>											 
 										  </tr>										
-										  <tr>
 										  <tr>
 										    <td>
   											     <span class="image left"><img src="images/landmarks.png" alt="Facial Landmarks"></span>
@@ -73,8 +86,8 @@
 										  		  <a href="publications.html#PRL2020_lndmks">PRL'2020</a>,
 										  		  <a href="publications.html#PAMI2021">PAMI'2021</a>
 											 </td>
-										  </tr>
-										    <td>
+ 										  </tr>
+                                <td>
   											     <span class="image left"><img src="images/attributes_dependencies_ciarp2011.png"  alt="Attributes dependencies"></span>
 									           <b>Dependencies between facial attributes given the appearance</b>.<br>
 									           Recent works report significant drops in performance for state-of-the-art 
